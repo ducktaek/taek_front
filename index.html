@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taekstagram</title>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script defer src="js/todo.js"></script>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/instagram.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+    <section>
+        <div class="header">
+            <nav class="nav">
+                <div class="logo">
+                    <img src="img/instagram_text_logo.png" alt="인스타그램">
+                </div>
+                <div class="search">
+                    <div class="search_bg">
+                        <div class="search_icon">
+                            <a href="#"><img src="img/search.png" alt=""></a>
+
+                        </div>
+                        <div class="search_input">
+
+                            <input type="text" class="name-input" placeholder="이름">
+
+
+                            <div class="search_box">
+                                최근 검색 항목
+                                <div class="diamond">
+                                    <h1>Todo List</h1>
+
+
+                                </div>
+
+
+
+
+                            </div>
+
+                            <div class="x_btn">
+                                <img src="/img/x_mark.png" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu">
+                    <div><a href="#"><img id="first_image" src="img/home2.png" alt=""></a></div>
+                    <div><a href="#"><img src="img/send_message.png" alt=""></a></div>
+                    <div><a href="#"><img src="img/post.png" alt=""></a></div>
+                    <div><a href="#"><img src="img/compass.png" alt=""></a></div>
+                    <div><a href="#"><img src="img/heart_line.png" alt=""></a></div>
+                    <div>
+                        <a class="my_profile" href="#">
+                            <img id="me" src="img/p4.jpeg" alt="">
+                        </a>
+                    </div>
+
+
+                    <div class="my_profile2">
+                        <div class="diamond"></div>
+                        <div><img src="img/user.png" alt="">
+                            <p>프로필
+                            <p>
+                        </div>
+                        <div><img src="img/store.png" alt="">
+                            <p>저장됨
+                            <p>
+                        </div>
+                        <div><img src="img/settings.png" alt="">
+                            <p>설정
+                            <p>
+                        </div>
+                        <div><img src="img/change.png" alt="">
+                            <p>계정 전환
+                            <p>
+                        </div>
+                        <div class="logout">
+                            <p>로그아웃</p>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="bod">
+            <main class="main">
+                <div class="story">
+                    <ul>
+                        <li><a href="#"><img src="img/s6.jpeg" alt=""></a>
+                            <p>birth: 12/07</p>
+                        </li>
+                        <li><a href="#"><img src="img/s2.jpg" alt=""></a>
+                            <p>major: CS</p>
+                        </li>
+                        <li><a href="#"><img src="img/s3.jpg" alt=""></a>
+                            <p>KWUniversity</p>
+                        </li>
+                        <li><a href="#"><img src="img/s4.jpeg" alt=""></a>
+                            <p>부자되고싶다</p>
+                        </li>
+                        <li><a href="#"><img src="img/s1.jpeg" alt=""></a>
+                            <p>떡볶이좋아</p>
+                        </li>
+                        <li><a href="#"><img src="img/s5.jpg" alt=""></a>
+                            <p>갓생호소인</p>
+                        </li>
+                        <button class="next_button">></button>
+                    </ul>
+                </div>
+            </main>
+
+            <div class="post">
+                <div class="p_header">
+                    <a href=""><img src="img/p4.jpeg" alt=""></a>
+                    <div class="p_name">
+                        <b>오기택</b>
+                        <a href="#"><img src="img/more.png" alt="더보기"></a>
+                    </div>
+                </div>
+
+                <!-- Slider main container -->
+                <div class="swiper custom custom1">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Liked -->
+                        <img class="dblike" src="/img/iconsrc.png" alt="">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="img/p3.jpeg" alt="이미지"></div>
+                        <div class="swiper-slide"><img src="img/p9.jpeg" alt="이미지"></div>
+                        <div class="swiper-slide"><img src="img/p13.jpeg" alt="이미지"></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev swiper_l"></div>
+                    <div class="swiper-button-next swiper_r"></div>
+                </div>
+
+                <div class="p_footer">
+                    <div class="post_icon">
+                        <div class="post_icon_sec">
+                            <a href="#" onclick="return false;">
+                                <img class="red_heart" src="img/heart_line.png" alt="">
+                            </a>
+                            <a href="#"><img src="img/textbox.png" alt=""></a>
+                            <a href="#"><img src="img/send_message.png" alt=""></a>
+
+                            <a href="#" onclick="return false;"><img class="store" src="img/store.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="liked">
+                        <img class="p_icon" src="img/p4.jpeg" alt="">
+                        <p>
+                            <b>오기택</b>님
+                            <b>외 999명</b>이 좋아합니다.
+                        </p>
+                    </div>
+                    <p class="p_text"><b>오기택</b> 나의 취미생활</p>
+                    <p class="p_text"><a id="comment" href="#">댓글 3개 모두 보기</a></p>
+                    <p class="p_text"><small>2시간 전</small></p>
+
+                    <div class="post_comment">
+                        <div class="p_c_border">
+                            <a href="#"><img src="img/smile.png" alt=""></a>
+                            <input type="text" placeholder="댓글 달기...">
+                            <a class="p_c_border_r" href="#">게시</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post post2">
+                <div class="p_header">
+                    <a href=""><img src="img/p4.jpeg" alt=""></a>
+                    <div class="p_name">
+                        <b>오기택</b>
+                        <a href="#"><img src="img/more.png" alt="더보기"></a>
+                    </div>
+                </div>
+
+                <!-- Slider main container -->
+                <div class="swiper custom custom2">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Liked -->
+                        <img class="dblike" src="/img/iconsrc.png" alt="">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="img/p5.jpeg" alt="이미지"></div>
+                        <div class="swiper-slide"><img src="img/p8.jpeg" alt="이미지"></div>
+                        <div class="swiper-slide"><img src="img/p14.jpeg" alt="이미지"></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev swiper_l"></div>
+                    <div class="swiper-button-next swiper_r"></div>
+                </div>
+
+                <div class="p_footer">
+                    <div class="post_icon">
+                        <div class="post_icon_sec">
+                            <a href="#" onclick="return false;">
+                                <img class="red_heart" src="img/heart_line.png" alt="">
+                            </a>
+                            <a href="#"><img src="img/textbox.png" alt=""></a>
+                            <a href="#"><img src="img/send_message.png" alt=""></a>
+
+                            <a href="#" onclick="return false;"><img class="store" src="img/store.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="liked">
+                        <img class="p_icon" src="img/p4.jpeg" alt="">
+                        <p>
+                            <b>오기택</b>님
+                            <b>여러 명</b>이 좋아합니다.
+                        </p>
+                    </div>
+                    <p class="p_text"><b>오기택</b> 나의 추억들</p>
+                    <p class="p_text"><a id="comment" href="#">댓글 5개 모두 보기</a></p>
+                    <p class="p_text"><small>7일 전</small></p>
+
+                    <div class="post_comment">
+                        <div class="p_c_border">
+                            <a href="#"><img src="img/smile.png" alt=""></a>
+                            <input type="text" placeholder="댓글 달기...">
+                            <a class="p_c_border_r" href="#">게시</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post post3">
+                <div class="p_header">
+                    <a href=""><img src="img/p4.jpeg" alt=""></a>
+                    <div class="p_name">
+                        <b>오기택</b>
+                        <a href="#"><img src="img/more.png" alt="더보기"></a>
+                    </div>
+                </div>
+
+                <!-- Slider main container -->
+                <div class="swiper custom custom3">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Liked -->
+                        <img class="dblike" src="/img/iconsrc.png" alt="">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="img/p7.jpeg" alt="이미지"></div>
+                        <div class="swiper-slide swiper-slide2"><img src="img/p12.jpeg" alt="이미지"></div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev swiper_l"></div>
+                    <div class="swiper-button-next swiper_r"></div>
+                </div>
+
+                <div class="p_footer">
+                    <div class="post_icon">
+                        <div class="post_icon_sec" onclick="return false;">
+                            <a href="#">
+                                <img class="red_heart" src="img/heart_line.png" alt="">
+                            </a>
+                            <a href="#"><img src="img/textbox.png" alt=""></a>
+                            <a href="#"><img src="img/send_message.png" alt=""></a>
+
+                            <a href="#" onclick="return false;"><img class="store" src="img/store.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="liked">
+                        <img class="p_icon" src="img/p4.jpeg" alt="">
+                        <p>
+                            <b>오기택</b>님
+                            <b>여러 명</b>이 좋아합니다.
+                        </p>
+                    </div>
+                    <p class="p_text"><b>오기택</b> 잊을 수 없는 순간들</p>
+                    <p class="p_text"><a id="comment" href="#">댓글 6개 모두 보기</a></p>
+                    <p class="p_text"><small>15일 전</small></p>
+
+                    <div class="post_comment">
+                        <div class="p_c_border">
+                            <a href="#"><img src="img/smile.png" alt=""></a>
+                            <input type="text" placeholder="댓글 달기...">
+                            <a class="p_c_border_r" href="#">게시</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 
+구분선------------------------------------------------------------------------------------------ -->
+            <div class="post post4">
+                <div class="p_header">
+                    <a href=""><img src="img/p4.jpeg" alt=""></a>
+                    <div class="p_name">
+                        <b>오기택 방명록</b>
+                        <a href="#"><img src="img/more.png" alt="더보기"></a>
+                    </div>
+                </div>
+
+                <!-- 방명록 -->
+                <div class="todo-container">
+                    <h1>방명록을 남겨주세요</h1>
+
+                    <div class="todos-container">
+                        <div class="todo-item">
+                            123
+                            <button class="delete-btn">x</button>
+                        </div>
+                        <div class="todo-item">
+                            123
+                            <button class="delete-btn">x</button>
+                        </div>
+                        <div class="todo-item">
+                            123
+                            <button class="delete-btn">x</button>
+                        </div>
+                        <div class="todo-item">
+                            123
+                            <button class="delete-btn">x</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p_footer">
+                    <div class="post_icon">
+                        <div class="post_icon_sec" onclick="return false;">
+                            <a href="#">
+                                <img class="red_heart" src="img/heart_line.png" alt="">
+                            </a>
+                            <a href="#"><img src="img/textbox.png" alt=""></a>
+                            <a href="#"><img src="img/send_message.png" alt=""></a>
+
+                            <a href="#" onclick="return false;"><img class="store" src="img/store.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="liked">
+                        <img class="p_icon" src="img/p4.jpeg" alt="">
+                        <p>
+                            <b>오기택</b>님
+                            <b>여러 명</b>이 좋아합니다.
+                        </p>
+                    </div>
+                    <p class="p_text"><b>오기택</b> 방명록 달기</p>
+                    <p class="p_text"><a id="comment" href="#">댓글 6개 모두 보기</a></p>
+                    <p class="p_text"><small>15일 전</small></p>
+
+                    <div class="post_comment">
+                        <div class="p_c_border">
+                            <a href="#"><img src="img/smile.png" alt=""></a>
+                            <input type="text" class="comment-input" placeholder="이름">
+                            <input type="text" class="todo-input" placeholder="내용">
+                            <a class="p_c_border_r" href="#">게시</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="info">
+                <div class="profile">
+                    <div class="profile_img_box">
+                        <img class="profile_img" src="img/p4.jpeg" alt="">
+                    </div>
+                    <div class="profile_name">
+                        <a href="#">OH KITAEK</a>
+                        <div>오기택</div>
+                    </div>
+                    <div class="profile_r">
+                        전환
+                    </div>
+                </div>
+
+                <div class="rec">
+                    <b class="rec1">회원님을 위한 추천</b>
+                    <b class="rec2">모두 보기</b>
+                </div>
+
+                <div class="r_p">
+
+                    <div class="r_p_img">
+                        <img src="img/p1.jpeg" alt="">
+                    </div>
+                    <div class="r_p_name">
+                        <a href="#">My daily life1</a>
+                        <div>instagram 신규 가입</div>
+                    </div>
+                    <span class="r_p_fol">
+                        follow
+                    </span>
+                </div>
+
+                <div class="r_p">
+                    <div class="r_p_img">
+                        <img src="img/p2.jpeg" alt="">
+                    </div>
+                    <div class="r_p_name">
+                        <a href="#">My daily life2</a>
+                        <div>회원님을 위한 추천</div>
+                    </div>
+                    <span class="r_p_fol">
+                        follow
+                    </span>
+                </div>
+
+                <div class="r_p">
+                    <div class="r_p_img">
+                        <img src="img/p6.jpeg" alt="">
+                    </div>
+                    <div class="r_p_name">
+                        <a href="#">My daily life3</a>
+                        <div>회원님을 팔로우합니다</div>
+                    </div>
+                    <span class="r_p_fol">
+                        follow
+                    </span>
+                </div>
+
+                <div class="r_p">
+                    <div class="r_p_img">
+                        <img src="img/p8.jpeg" alt="">
+                    </div>
+                    <div class="r_p_name">
+                        <a href="#">My daily life4</a>
+                        <div>회원님을 위한 추천</div>
+                    </div>
+                    <span class="r_p_fol">
+                        follow
+                    </span>
+                </div>
+
+                <div class="r_p">
+                    <div class="r_p_img">
+                        <img src="img/p10.jpeg" alt="">
+                    </div>
+                    <div class="r_p_name">
+                        <a href="#">My daily life5</a>
+                        <div>회원님을 위한 추천</div>
+                    </div>
+                    <span class="r_p_fol">
+                        follow
+                    </span>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+    <script>
+        /* =======swiper JS=============*/
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal', //or vertical
+            loop: false,
+
+            allowTouchMove: false,
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+
+                clickable: false,
+                hideOnClick: false,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            /* And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },*/
+        });
+        /* =======swiper JS end==========*/
+
+        /* header searchbox */
+        $(".search_input input").focus(function () {
+            $(".search_box").show();
+            $(".search_icon").hide();
+            $(".x_btn").show();
+        })
+        $(".x_btn").click(function () {
+            $(this).hide();
+        })
+        $(".search_input input").focusout(function () {
+            $(".search_box").slideUp(200);
+            $(".search_icon").show();
+            $(".x_btn").hide();
+        })
+
+        /* header mini profile */
+        var i = 0;
+        document.querySelector("#me").onclick = function () {
+            event.stopPropagation();
+
+            if (i % 2 == 0) {
+                this.style.border = "1px solid #000";
+                document.getElementById("first_image").src = "img/home.png";
+                document.querySelector(".my_profile2").style.display = "block";
+            }
+            else {
+                this.style.border = "none";
+                document.getElementById("first_image").src = "img/home2.png";
+                $(".my_profile2").slideUp(200);
+            }
+            i++;
+
+            $("body").click(function () {
+                document.querySelector("#me").style.border = "none";
+                document.getElementById("first_image").src = "img/home2.png";
+                $(".my_profile2").slideUp(200);
+                i++;
+            })
+        }
+
+        /* post like onclick event */
+        /* post dbclick event */
+        //src="img/heart_line.png" img/red_heart.png
+        var i = 0;
+        var like = document.querySelectorAll(".red_heart");
+        like[0].onclick = function () {
+            if (i % 2 == 0) {
+                this.src = "img/red_heart.png";
+            }
+            else {
+                this.src = "img/heart_line.png";
+            }
+            i++;
+        }
+        $(".custom1").dblclick(function () {
+            like[0].src = "img/red_heart.png";
+            i = 1;
+            $(".custom1 .dblike").fadeIn(200);
+            $(".custom1 .dblike").delay(600);
+            $(".custom1 .dblike").fadeOut(300);
+        })
+
+        var j = 0;
+        like[1].onclick = function () {
+            if (j % 2 == 0) {
+                this.src = "img/red_heart.png";
+            }
+            else {
+                this.src = "img/heart_line.png";
+            }
+            j++;
+        }
+        $(".custom2").dblclick(function () {
+            like[1].src = "img/red_heart.png";
+            j = 1;
+        })
+        $(".custom2").dblclick(function () {
+            like[1].src = "img/red_heart.png";
+            j = 1;
+            $(".custom2 .dblike").fadeIn(200);
+            $(".custom2 .dblike").delay(600);
+            $(".custom2 .dblike").fadeOut(300);
+        })
+
+        var k = 0;
+        like[2].onclick = function () {
+            if (k % 2 == 0) {
+                this.src = "img/red_heart.png";
+            }
+            else {
+                this.src = "img/heart_line.png";
+            }
+            k++;
+        }
+        $(".custom3").dblclick(function () {
+            like[2].src = "img/red_heart.png";
+            k = 1;
+        })
+        $(".custom3").dblclick(function () {
+            like[2].src = "img/red_heart.png";
+            k = 1;
+            $(".custom3 .dblike").fadeIn(200);
+            $(".custom3 .dblike").delay(600);
+            $(".custom3 .dblike").fadeOut(300);
+        })
+
+        //post store click event
+        var store = document.querySelectorAll(".store");
+        var g = 0, f = 0, d = 0;
+        store[0].onclick = () => {
+            if (g % 2 == 0) {
+                store[0].src = "img/stored.png";
+            }
+            else {
+                store[0].src = "img/store.png";
+            }
+            g++;
+        }
+        store[1].onclick = () => {
+            if (f % 2 == 0) {
+                store[1].src = "img/stored.png";
+            }
+            else {
+                store[1].src = "img/store.png";
+            }
+            f++;
+        }
+        store[2].onclick = () => {
+            if (d % 2 == 0) {
+                store[2].src = "img/stored.png";
+            }
+            else {
+                store[2].src = "img/store.png";
+            }
+            d++;
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
